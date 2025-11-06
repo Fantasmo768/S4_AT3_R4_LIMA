@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição para workshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Inscrição workshop para programadores</h1>
+    </header>
+    <main>
+        <form action="Informações.txt" method="post">
+            <fieldset>
+                <legend>Informações pessoais:</legend>
+
+                <label for="nome">Nome completo:</label>
+                <input id="nome" name="nome" type="text" minlength="3" maxlength="150" required
+                    placeholder="Digite seu nome completo">
+
+                <label for="cidade">Cidade:</label>
+                <input id="cidade" name="cidade" type="text" maxlength="60" required placeholder="Digite sua cidade">
+
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email" maxlength="150" required placeholder="Ex: exemplo@gmail.com"
+                    pattern="^[a-z0-9.]">
+
+                <label for="telefone">Telefone:</label>
+                <input id="telefone" name="telefone" type="tel" maxlength="20" required placeholder="Ex: DDD XXXXX-XXXX"
+                    pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
+
+                <label for="comentarios">Comentários adicionais (opcional):</label>
+                <textarea name="comentarios" id="comentarios" rows="5" cols="90"
+                    placeholder="Insira informações adicionais sobre você (caso não deseje informar nada, deixe em branco)"></textarea>
+
+                <label for="identidade">Foto da identidade:</label>
+                <input id="identidade" type="file" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Interesses para o workshop:</legend>
+
+                <label for="faixaetaria">Faixa etária:</label>
+                <select name="faixaetaria" id="faixaetaria" required>
+                    <option value="">Selecione</option>
+                    <option value="15 a 22 anos">15 a 20 anos</option>
+                    <option value="22 a 29 anos">20 a 25 anos</option>
+                    <option value="29 a 36 anos">25 a 30 anos</option>
+                    <option value="36 a 43 anos">30 a 35 anos</option>
+                    <option value="50 a 57 anos">35 a 40 anos</option>
+                    <option value="57+ anos">57+ anos</option>
+                </select>
+
+
+
+                <label for="interesses">Área de interesse</label>
+                <select name="interesses" id="interesses" required>
+                    <option value="">Selecione</option>
+                    <option value="analista de banco de dados">Analista de banco de dados</option>
+                    <option value="desenvolvedor back end">Desenvolvedor back end</option>
+                    <option value="desenvolvedor front end">Desenvolvedor front end</option>
+                    <option value="Designer web">Designer web</option>
+                </select>
+
+                <label for="turno">Turno de interesse:</label>
+                <label for="manha">Manhã</label>
+                <input id="manha" name="turno" type="radio" value="manha">
+                <label for="tarde">Tarde</label>
+                <input id="tarde" name="turno" type="radio" value="tarde">
+                <label for="noite">Noite</label>
+                <input id="noite" name="turno" type="radio" value="noite">
+
+                <label for="topicos">Tópicos de interess</label>
+                <label for="software">Software</label>
+                <input type="checkbox" name="topicos" id="software" value="software">
+                <label for="hardware">Hardware</label>
+                <input type="checkbox" id="hardware" name="topicos" value="hardware">
+                <label for="javascript">Javascript</label>
+                <input type="checkbox" id="javascript" name="topicos" value="javascript">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="html" name="topicos" value="javascript">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="css" name="topicos" value="css">
+            </fieldset>
+
+            <input type="submit">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy, todos os direitos reservados, 2025</p>
+    </footer>
+</body>
+
+</html>
