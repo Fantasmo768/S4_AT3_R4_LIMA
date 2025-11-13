@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,41 +8,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
+<!-- Neste projeto, a tag required foi utilizada para qualquer informação essencial para os envios dos dados de um usuário para o workshop, porém informações descartáveis (como informações extras) não possuem essa validação. As tags minlength foram utilizadas para impedir envios inadequados de informações vindas do usuário, enquanto maxlength foi utilizada para evitar sobrecarregamento do armazenamento do sistema.-->
 <body>
+
+    <!-- Título da página -->
     <header>
         <h1>Inscrição workshop para programadores</h1>
     </header>
+
+    <!-- Conteúdo principal da página-->
     <main>
-        <form action="Informações.txt" method="post">
+
+        <!-- Formulário do programador -->
+        <form action="envio.html" method="get">
+
+            <!-- Área de informações pessoais -->
             <fieldset>
                 <legend>Informações pessoais:</legend>
 
+                <!-- Campo do nome -->
                 <label for="nome">Nome completo:</label>
                 <input id="nome" name="nome" type="text" minlength="3" maxlength="150" required
                     placeholder="Digite seu nome completo">
 
+                <!-- Campo da cidade -->
                 <label for="cidade">Cidade:</label>
                 <input id="cidade" name="cidade" type="text" maxlength="60" required placeholder="Digite sua cidade">
 
+
+                <!-- Campo do email -->
                 <label for="email">Email:</label>
                 <input id="email" name="email" type="email" maxlength="150" required placeholder="Ex: exemplo@gmail.com"
-                    pattern="^[a-z0-9.]">
+                    pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{2,}$">
+                <!-- É importante checar se o formato do email enviado pelo usuário é correto, para impedir qualquer envio incorreto, assim como a maxlength para impedir uso desnecessário de caracteres a fim de não sobrecarregar o armazenamento do sistema. -->
 
+                <!-- Campo do telefone (checado pelo regex)-->
                 <label for="telefone">Telefone:</label>
-                <input id="telefone" name="telefone" type="tel" maxlength="20" required placeholder="Ex: DDD XXXXX-XXXX"
-                    pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
+                <input id="telefone" name="telefone" type="tel" maxlength="20" required
+                    placeholder="Ex: (DDD)XXXXX-XXXX" pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
+                <!-- É importante checar se o formato do telefone enviado pelo usuário é correto, para impedir qualquer envio incorreto, assim como a maxlength para impedir uso desnecessário de caracteres a fim de não sobrecarregar o armazenamento do sistema. -->
 
+                <!-- Campo para informações adicionais do usuários (opcional)-->    
                 <label for="comentarios">Comentários adicionais (opcional):</label>
                 <textarea name="comentarios" id="comentarios" rows="5" cols="90"
                     placeholder="Insira informações adicionais sobre você (caso não deseje informar nada, deixe em branco)"></textarea>
 
+
+                <!-- Foto da identidade para confirmação -->
                 <label for="identidade">Foto da identidade:</label>
-                <input id="identidade" type="file" required>
+                <input id="identidade" name="identidade" type="file" required>
             </fieldset>
 
+            <!-- Área de interesses sobre o workshop -->
             <fieldset>
                 <legend>Interesses para o workshop:</legend>
 
+                <!-- Campo para faixa etária -->
                 <label for="faixaetaria">Faixa etária:</label>
                 <select name="faixaetaria" id="faixaetaria" required>
                     <option value="">Selecione</option>
@@ -54,9 +76,8 @@
                     <option value="57+ anos">57+ anos</option>
                 </select>
 
-
-
-                <label for="interesses">Área de interesse</label>
+                <!-- Campo para a área de interesse -->
+                <label for="interesses">Área de interesse:</label>
                 <select name="interesses" id="interesses" required>
                     <option value="">Selecione</option>
                     <option value="analista de banco de dados">Analista de banco de dados</option>
@@ -65,31 +86,40 @@
                     <option value="Designer web">Designer web</option>
                 </select>
 
-                <label for="turno">Turno de interesse:</label>
-                <label for="manha">Manhã</label>
-                <input id="manha" name="turno" type="radio" value="manha">
-                <label for="tarde">Tarde</label>
-                <input id="tarde" name="turno" type="radio" value="tarde">
-                <label for="noite">Noite</label>
-                <input id="noite" name="turno" type="radio" value="noite">
+                <!-- div para as labels de checkbox e radio -->
+                <div>
 
-                <label for="topicos">Tópicos de interess</label>
-                <label for="software">Software</label>
-                <input type="checkbox" name="topicos" id="software" value="software">
-                <label for="hardware">Hardware</label>
-                <input type="checkbox" id="hardware" name="topicos" value="hardware">
-                <label for="javascript">Javascript</label>
-                <input type="checkbox" id="javascript" name="topicos" value="javascript">
-                <label for="html">HTML</label>
-                <input type="checkbox" id="html" name="topicos" value="javascript">
-                <label for="css">CSS</label>
-                <input type="checkbox" id="css" name="topicos" value="css">
+                    <!-- Campo para turno de interesse (tipo radio) -->
+                    <label for="turno">Turno de interesse:</label>
+                    <label for="manha">Manhã</label>
+                    <input id="manha" name="turno" type="radio" value="manha" required>
+                    <label for="tarde">Tarde</label>
+                    <input id="tarde" name="turno" type="radio" value="tarde">
+                    <label for="noite">Noite</label>
+                    <input id="noite" name="turno" type="radio" value="noite">
+
+                    <!-- Campo para tópicos de interesse (tipo checkbox) -->
+                    <label for="topicos">Tópicos de interesse:</label>
+                    <label for="software">Software</label>
+                    <input type="checkbox" name="topicos" id="software" value="software">
+                    <label for="hardware">Hardware</label>
+                    <input type="checkbox" id="hardware" name="topicos" value="hardware">
+                    <label for="javascript">Javascript</label>
+                    <input type="checkbox" id="javascript" name="topicos" value="javascript">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" id="html" name="topicos" value="html">
+                    <label for="css">CSS</label>
+                    <input type="checkbox" id="css" name="topicos" value="css">
+
+                </div>
             </fieldset>
 
+            <!-- Botão de envio do forms -->
             <input type="submit">
         </form>
     </main>
 
+    <!-- Rodapé da página -->
     <footer>
         <p>&copy, todos os direitos reservados, 2025</p>
     </footer>

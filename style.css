@@ -1,0 +1,171 @@
+/* Reset de espaçamento padrão */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilização body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(52, 51, 51);
+    color:rgb(227, 227, 227);
+    font-size: 16px;
+    height: 100vh;
+}
+
+/* Estilização header */
+header {
+    background-color: rgb(71, 68, 68);
+    width: auto;
+    text-align: center;
+    padding: 3%;
+    margin: 1% 0 2% 0;
+    border-radius: 10px;
+}
+
+/* Estilização main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilização form */
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(81, 81, 81);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+    width: auto;
+    height: auto;
+    padding: 1%;
+    margin-bottom: 3%;
+}
+
+/* hover para zoom do fieldset */
+fieldset:hover {
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+/* Estilização fieldset */
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(223, 18, 62);
+    width: auto;
+    padding: 2%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+}
+
+/* Estilização legenda do fieldset */
+legend {
+    color: rgb(223, 18, 62);
+    font-size: 0.9em;
+}
+
+/* Estilização input */
+input {
+    margin-bottom: 0.8%;
+    padding: 1%;
+    background-color: rgb(81, 81, 81);
+    border: none;
+    border-bottom: solid rgb(223, 18, 62);
+    color: rgb(227, 227, 227);
+}
+
+/* Estilização das labels dentro da div de checkbox e radio */
+div label{
+    display: flex;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização div de checkbox e radio */
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+/* Estilização select */
+select {
+    margin-bottom: 0.8%;
+    padding: 1%;
+    background-color: rgb(81, 81, 81);
+    border: none;
+    border-bottom: solid rgb(223, 18, 62);
+    color: rgb(227, 227, 227);
+}
+
+/* Estilização label */
+label {
+    font-size: 0.85em;
+    margin-bottom: 0.6%;
+}
+
+/* Estilização textarea */
+textarea {
+    margin-bottom: 0.8%;
+    padding: 1%;
+    background-color: rgb(81, 81, 81);
+    border-radius: 4px;
+    border: solid rgb(223, 18, 62);
+    color: white;
+}
+
+/* Estilização do input com id identidade */
+#identidade {
+    margin-bottom: 0.8%;
+    padding: 1%;
+    background-color: rgb(81, 81, 81);
+    border-radius: 4px;
+    border: solid rgb(223, 18, 62);
+    color: white;
+}
+
+/* Estilização do input de tipo "submit" */
+input[type="submit"] {
+    background-color: rgb(68, 66, 66);
+    border-radius: 10px;
+    border: none;
+    width: 20%;
+    align-self: center;
+}
+
+/* Hover do input de tipo "submit" */
+input[type="submit"]:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* Estilização do botão de enviar arquivo do input com nome "identidade" */
+input[name="identidade"]::file-selector-button {
+    background-color: rgb(68, 66, 66);
+    border-radius: 4px;
+    border: none;
+    color: rgb(227, 227, 227);
+    padding: 1%;
+}
+
+/* Hover do botão de enviar arquivo do input com nome "identidade" */
+input[name="identidade"]::file-selector-button:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* Estilização footer */
+footer {
+    padding: 2% 0 2% 0;
+    width: 100%;
+    background-color: rgb(71, 68, 68);
+    text-align: center;
+}
